@@ -1,0 +1,16 @@
+ee4d4fbc931e93a5a74d32e87c31efba *DESCRIPTION
+06471e891a85263bd5bb67fea38b821e *NAMESPACE
+8dac9696b0ff06d22b0f7322e9b07a0c *NEWS
+77edd2757164461deab6ee9e04a432bb *R/package.r
+1f052a0f4d64bfaedbbf5d5956a6d61a *R/rdatamarket.r
+68dd96bcba0cf6be3c6f7e9390ffde53 *R/util.r
+85c54c4b791c4c6470cd189a145dfdb4 *README.md
+65d5b27f729985fcea4a270b54229a12 *demo/00Index
+877c93d6c69e5f7cdf1fdf72bc84a340 *demo/rdatamarket-usage.r
+6bfdf1f00cc895a718478fdd6fb33334 *inst/tests/test-all.r
+5dd7524ead630b89f1ddf71eb9e1ef46 *man/dmdims.Rd
+e0cd42fa1d806daae25e492c2142decb *man/dminfo.Rd
+990841d9182cf2c42131915ae4e6d4fe *man/dminit.Rd
+d21aa20fe8d04aabf31159af462b40ff *man/dmlist.Rd
+1a10672bbfc3571ad2d10c0a4348f201 *man/dmseries.Rd
+6e20eb1256946c46c46dea5c263e1ec1 *man/rdatamarket-package.Rd
