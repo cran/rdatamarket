@@ -1,9 +1,9 @@
-9d162f681b8a18105538b8a88be645f6 *DESCRIPTION
+ad7233398d591b7e068dba39b7cbdd7a *DESCRIPTION
 fdc909b9cb965c08bed244a8341e1227 *NAMESPACE
-513b480bf8f84a3b53bd7ef98c8794c1 *NEWS
+0d8b0dd4d13c8ae86bef2799e7eb7a12 *NEWS
 8423009b4e9fbeb6673fb1d390d532e6 *R/package.r
-7ae154c58d711b8f70df63f0acfec424 *R/rdatamarket.r
-68dd96bcba0cf6be3c6f7e9390ffde53 *R/util.r
+15814579a7727e0d9b87e3313fb83f0a *R/rdatamarket.r
+bff129d81dd6b048b2d67ad973d0cda8 *R/util.r
 7a34f8f10337e9b52bbb91ae22be7caa *README.md
 65d5b27f729985fcea4a270b54229a12 *demo/00Index
 877c93d6c69e5f7cdf1fdf72bc84a340 *demo/rdatamarket-usage.r
