@@ -4,12 +4,24 @@ The `rdatamarket` package is an R client for the [DataMarket.com
 API](http://datamarket.com/api/v1/), fetching the contents and metadata
 of datasets on DataMarket.com into R.
 
+To install the package:
+
+    > install.packages("rdatamarket")
+
+(If you are on Linux and get error messages involving RCurl, you may need
+to install a package called `libcurl4-openssl-dev` or similar, to get RCurl
+working.)
+
+... and then load the package:
+
+    > library(rdatamarket)
+
 # Quick start
 
 Just find the data you want on datamarket.com, then copy the URL from your
 browser (or a short URL to it) into `dmlist` or `dmseries`:
 
-    > plot(dmseries("http://datamarket.com/data/set/17tm/#ds=17tm|kqc=17.v.i"))
+    > plot(dmseries("http://datamarket.com/data/set/17tm/#ds=17tm!kqc=17.v.i"))
     > plot(dmseries("http://data.is/nyFeP9"))
     > l <- dmlist("http://data.is/nyFeP9"))
 
@@ -23,7 +35,7 @@ Get a dataset object (find the ID in a datamarket URL, or just paste in
 the whole URL if you like):
 
     > oil <- dminfo("17tm")
-    > oil <- dminfo("http://datamarket.com/data/set/17tm/#ds=17tm|kqc=17.v.i"))
+    > oil <- dminfo("http://datamarket.com/data/set/17tm/#ds=17tm!kqc=17.v.i"))
     > print(oil)
     Title: "Oil: Production tonnes"
     Provider: "BP"

@@ -107,7 +107,7 @@ dimfilter <- function(ds, infos, ...) {
       ifelse(
         identical(dimspec, c()),
         dsid,
-        paste(dsid, '|', paste(dimspec, collapse=':'), sep='')
+        paste(dsid, '!', paste(dimspec, collapse=':'), sep='')
       ))
   }
   return(paste(newds, collapse='/'))
@@ -138,20 +138,32 @@ parse_qs <- function(qs) {
   if (class(qs) == 'list') {
     return(qs)
   }
+  if (!is.na(qs) && grepl('^!', qs)) {
+    qs <- substr(qs, 2, 100000)
+  }
   l <- lapply(as.list(strsplit(qs, '&', fixed=TRUE)[[1]]), FUN=function(pair) {
     keyval <- as.list(strsplit(pair, '=', fixed=TRUE)[[1]])
+    if (is.na(keyval[[1]]) || keyval[[1]] %in% c("display", "s", "e", "f")) {
+      return (NA)
+    }
     val <- ifelse(length(keyval) > 1, paste(keyval[-1], collapse='='), '')
     names(val) <- keyval[[1]]
     return(val)
   })
+  l <- Filter(function(x) !is.na(x), l)
   names(l) <- sapply(l, names)
   return(l)
 }
 
-get.datamarket.csv <- function(ctx, path, curl, .params) {
+get.datamarket.csv <- function(ctx, path, curl, .params, origds=NA) {
+  curlopts = list()
+  if (!is.na(origds)) {
+    curlopts$Referer <- origds
+  }
   content <- getForm(
     paste(ctx$base, path, sep=""),
     curl=curl,
+    .opts=curlopts,
     .params=c(ctx$qs, split_time=0, callback="", .params)
     )
   if (is.raw(content)) {
