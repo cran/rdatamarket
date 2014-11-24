@@ -1,17 +1,18 @@
 Package: rdatamarket
 Imports: RCurl, RJSONIO
 Maintainer: Gunnlaugur Thor Briem <gthb@datamarket.com>
-License: MIT
+License: MIT + file LICENSE
 Title: Data access API for DataMarket.com
 Author: Gunnlaugur Thor Briem <gthb@datamarket.com>
-Description: Fetches data from DataMarket.com, either as timeseries in
-        zoo form (dmseries) or as long-form data frames (dmlist).
-        Metadata including dimension structure is fetched with dminfo,
-        or just the dimensions with dmdims.
-Version: 0.6.4
+Description: Fetches data from DataMarket.com, either as
+    timeseries in zoo form (dmseries) or as long-form data
+    frames (dmlist). Metadata including dimension structure
+    is fetched with dminfo, or just the dimensions with
+    dmdims.
+Version: 0.6.5
 URL: http://datamarket.com/api/lib/rdatamarket
 Depends: R (>= 2.10.0), zoo
-Collate: 'package.r' 'rdatamarket.r' 'util.r'
-Packaged: 2012-02-06 14:47:08 UTC; gthb
+Packaged: 2014-11-24 15:06:05 UTC; gthb
+NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2012-02-06 15:16:49
+Date/Publication: 2014-11-24 18:40:24
